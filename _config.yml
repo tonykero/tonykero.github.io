@@ -10,6 +10,11 @@ repository: tonykero/tonykero.github.io
 include:
   - _pages
   - _includes
+
+collections:
+  cours:
+    output: true
+
 defaults:
   - {scope: {type: posts}, values: {layout: page, permalink: '/posts/:year/:month/:day/:title/'}}
   - {scope: {type: pages}, values: {layout: page}}
