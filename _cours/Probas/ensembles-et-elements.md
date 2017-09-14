@@ -1,7 +1,4 @@
 ---
-layout: page
-title: "Ensembles & élements"
-permalink: Probas/Ensembles
 category: Probas
 ---
 
