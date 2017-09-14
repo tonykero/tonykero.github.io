@@ -97,3 +97,76 @@ B =
 \quad , B
 $$
 réduite
+
+## Systèmes Linéaires
+
+### Généralités
+
+* <u>Définition:</u><br>
+Un système linéaire à $$n$$ équations et $$p$$ inconnues et la donné de $$n$$ équations de la forme:
+
+<script type="math/tex; mode=display">
+    \begin{array}{ccc}
+        a_{1,1}x_{1}    & + & a_{1,2}x_2    & + & a_{1,3}x_3    & + & \cdots    & + & a_{1,p}x_{p} & = & b_1    \\
+        a_{2,1}x_{1}    & + & a_{2,2}x_2    & + & a_{2,3}x_3    & + & \cdots    & + & a_{2,p}x_{p} & = & b_2    \\
+        \vdots          &   & \vdots        &   & \vdots        &   &           &   & \vdots       &   & \vdots \\
+        a_{n,1}x_{1}    & + & a_{n,2}x_2    & + & a_{n,3}x_3    & + & \cdots    & + & a_{n,p}x_{p} & = & b_n
+    \end{array}
+</script>
+
+où $$a_{1,1}, a_{1,2} \ldots a_{n,p},$$ et $$b_1 \ldots b_n$$ sont les données
+
+et $$(x_1, x_2 \ldots x_p)$$ est le vecteur des inconnues
+
+* <u>Exemple:</u><br>
+$$\quad n = p = 3$$
+<script type="math/tex; mode=display">
+S = 
+\begin{cases}
+    \begin{align*}
+    x + y + 2z = 5 \\
+    x - y - z = 1 \\
+    x     + z = 3 \\
+    \end{align*}
+\end{cases}
+\Leftrightarrow
+\begin{cases}
+    1x + 1y + 2z = 5 \\
+    1x - 1y - 1z = 1 \\
+    1x + 0y + 1z = 3 \\
+\end{cases}
+</script>
+    * But: Trouver les valeurs $$x, y, z$$ qui vérifient le système $$S$$
+
+### Matrice Augmentée
+
+Pour le système $$S$$ la matrice augmentée est:
+
+<script type="math/tex; mode=display">
+\left[
+\begin{array}{ccc|c}
+    1 & 1  & 2  & 5 \\
+    1 & -1 & -1 & 1 \\
+    1 & 0  & 1  & 3 \\
+\end{array}
+\right]
+</script>
+* But: Réduire (via échelonnement de lignes) la matrice augmentée associée au système en utilisant le pivot de Gauss
+
+### Résolution par la méthode de Gauss
+
+<script type="math/tex; mode=display">
+\left[
+\begin{array}{ccc|c}
+    \fbox{1} & 1  & 2  & 5 \\
+    1        & -1 & -1 & 1 \\
+    1        & 0  & 1  & 3 \\
+\end{array}
+\right]
+</script>
+
+* <u>Remarque:</u> Résoudre le système $$S$$ revient à trouver la matrice réduite lignes-échelonnées relatives à la matrice augmentée donnée au départ.
+
+Phase de descente
+
+TODO
