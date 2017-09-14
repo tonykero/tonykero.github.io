@@ -14,10 +14,12 @@ include:
 collections:
   cours:
     output: true
+    permalink: /:categories/:title
 
 defaults:
   - {scope: {type: posts}, values: {layout: page, permalink: '/posts/:year/:month/:day/:title/'}}
   - {scope: {type: pages}, values: {layout: page}}
+  - {scope: {path: "_cours"}, values: {layout: page}}
 # Build settings
 markdown: kramdown
 kramdown:
