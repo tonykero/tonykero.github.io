@@ -167,6 +167,115 @@ Pour le système $$S$$ la matrice augmentée est:
 
 * <u>Remarque:</u> Résoudre le système $$S$$ revient à trouver la matrice réduite lignes-échelonnées relatives à la matrice augmentée donnée au départ.
 
-Phase de descente
+#### Phase de descente:
 
-TODO
+<script type="math/tex; mode=display">
+
+\begin{array}{l}
+    \sim \\
+    L_2 \leftarrow L_2 - L_1 \\
+    L_3 \leftarrow L_3-L_1
+\end{array}
+\left[
+    \begin{array}{ccc|c}
+        1 & 1           & 2  & 5    \\
+        0 & \fbox{-2}   & -3 & -4    \\
+        0 & -1          & -1 & -2   \\
+    \end{array}
+\right] \\
+
+\begin{array}{l}
+    \sim \\
+    L_2 \leftrightarrow L_3 \\
+\end{array}
+\left[
+    \begin{array}{ccc|c}
+        1 & 1 & 2  & 5 \\
+        0 & -1 & -1 & -2 \\
+        0 & -2 & -3  & -4 \\
+    \end{array}
+\right] \\
+
+\begin{array}{l}
+    \sim \\
+    L_2 \leftarrow (-1) \times L_2 \\
+\end{array}
+\left[
+    \begin{array}{ccc|c}
+        1 & 1 & 2  & 5 \\
+        0 & 1 & 1 & 2 \\
+        0 & -2 & -3  & -4 \\
+    \end{array}
+\right] \\
+
+\begin{array}{l}
+    \sim \\
+    L_3 \leftarrow L_3 + 2L_2 \\
+\end{array}
+\left[
+    \begin{array}{ccc|c}
+        1 & 1 & 2  & 5 \\
+        0 & 1 & 1 & 2 \\
+        0 & 0 & -1  & 0 \\
+    \end{array}
+\right] \\
+
+\begin{array}{l}
+    \sim \\
+    L_3 \leftarrow L_3 \times (-1) \\
+\end{array}
+\left[
+    \begin{array}{ccc|c}
+        1 & 1 & 2  & 5 \\
+        0 & 1 & 1 & 2 \\
+        0 & 0 & 1  & 0 \\
+    \end{array}
+\right] \\
+</script>
+
+#### Phase de remontée:
+
+<script type="math/tex; mode=display">
+\begin{array}{l}
+    \sim \\
+    L_1 \leftarrow L_1 - 2L_3 \\
+    L_2 \leftarrow L_2 - L_3 
+\end{array}
+\left[
+    \begin{array}{ccc|c}
+        1 & 1 & 0  & 5 \\
+        0 & 1 & 0 & 2 \\
+        0 & 0 & 1  & 0 \\
+    \end{array}
+\right] \\
+
+\begin{array}{l}
+    \sim \\
+    L_1 \leftarrow L_1 - L_2 \\ 
+\end{array}
+\left[
+    \begin{array}{ccc|c}
+        1 & 0 & 0  & 3 \\
+        0 & 1 & 0 & 2 \\
+        0 & 0 & 1  & 0 \\
+    \end{array}
+\right] \\
+
+</script>
+
+#### Vérification:
+
+<script type="math/tex; mode=display">
+S
+\begin{cases}
+    x + y + 2z = 5 \\
+    x - y - z = 1 \\
+    x + z = 3 \\
+\end{cases}
+\Leftrightarrow
+\begin{cases}
+    3 + 2 + 2 \times 0 = 5 \\
+    3 - 2 - 0 = 1 \\
+    3 + 0 + 0 = 3 \\
+\end{cases}
+</script>
