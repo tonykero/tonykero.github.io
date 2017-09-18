@@ -43,91 +43,173 @@ On distingue 3 types d'ensembles:
 * **Indénombrable**
     * Dans le cas restant on dit qu'il est (infini) indénombrable
 
-Si a est un élément de l'ensemble A on dit que a appartient à A et on note a ∈ (appartient) A
+Si a est un élément de l'ensemble A on dit que a appartient à A et on note $$a \in A$$
 
-On peut se donner un ensemble universel qui contient tous les élements considérés. L'ensemble qui ne contient aucun élement s'apelle l'ensemble vide ∅
+On peut se donner un ensemble universel qui contient tous les élements considérés. L'ensemble qui ne contient aucun élement s'apelle l'ensemble vide $$\emptyset$$
 
 On dit que l'ensemble A est inclus dans l'ensemble B (ou est un sous-ensemble de B) si tous les élements de A sont dans B.
-Cela se note A ⊂ B (est inclus)
+Cela se note $$A \subset B$$ (est inclus)
 
 En particulier travaillant dans l'ensemble dans l'univers Ω on a toujours
-* A ⊂ Ω
-* ∅ ⊂ A
+* $$A \subset \Omega$$
+* $$\emptyset \subset A$$
 
-De plus on a l'équivalence { A ⊂ B, B ⊂ A <=> A = B
+De plus on a l'équivalence $$\{ A \subset B, B \subset A \Leftrightarrow A = B$$
 
 L'ensemble des sous ensembles d'un ensemble de A s'appelle l'ensemble des parties et se note P(A)
 
-Proposition: Soit A un ensemble fini de cardinal n ∈ N Alors P(A) est finie et Card P(A) = 2^n
+Proposition: Soit A un ensemble fini de cardinal $$n \in N$$ Alors P(A) est finie et Card P(A) = 2^n
 
 ...
 
 Exemple:  
 * A {1, 2, 3} est un ensemble fini de cardinal 3  
-P(A) = {𝜙, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}
-* ℕ = {0, 1, 2}, ℤ = { , -2, -1, 0, 1, 2}
-* ℚ = {p/q, p ∈ ℤ, q ∈ ℕ^x}  
+ $$P(A) = \{\emptyset, \{1\}, \{2\}, \{3\}, \{1, 2\}, \{1, 3\}, \{2, 3\}, \{1, 2, 3\}\}$$
+* $$\mathbb{N} = \{0, 1, 2\}, \mathbb{Z} = \{ , -2, -1, 0, 1, 2\}$$
+* $$\mathbb{Q} = \{\frac{p}{q}, p \in \mathbb{Z}, q \in \mathbb{N}^x\}$$
 
 sont des ensembles infini dénombrables (B & C sont indénombrables)
 
-* 1 ∈ R et {1} ⊂ R
+* $$1 \in \mathbb{R} et {1} \subset \mathbb{R}$$
 
 ## <a id="2"> Opérations sur les ensembles
-Soient A et B 2 ensembles dans un univers Ω. On définit les opérations suivantes:
+Soient A et B 2 ensembles dans un univers $$\Omega$$. On définit les opérations suivantes:
 
 * Réunion
-    * A ∪ B = {x ∈ Ω, x ∈ A ou x ∈ B}
+    * $$A \cup B = \{x \in \Omega, x \in A$$ ou $$x \in B\}$$
     * ![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Venn0111.svg/256px-Venn0111.svg.png)
 * Intersection
-    * A ∩ B = (x ∈ Ω, x ∈ ℕ et x ∈ B)
+    * $$A \cap B = (x \in \Omega, x \in \mathbb{N}$$ et $$x \in B)$$
     * ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Venn0001.svg/256px-Venn0001.svg.png)
 * Complémentarité
-    * A&#773; = Ca = {x ∈ Ω , x ∈ A ou x ∈ B}
+    * $$\overline{A} = C_a = \{x \in \Omega , x \in A$$ ou $$x \in B\}$$
     * ![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Venn10.svg/256px-Venn10.svg.png)
 * Différence
-    * A - B = A \ B = {x ∈ Ω , x ∈ A ou x ∈ B}
-    donc A - B = A ∩ B&#773;
+    * $$A - B = A \ B = \{x \in \Omega , x \in A$$ ou $$x \in B\}$$
+    donc $$A - B = A \cap \overline{B}$$
     * ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Venn0010.svg/256px-Venn0010.svg.png)
 * Différence symmétrique
-    * A ∆ B = (A + B) ∪ (B - A) = A ∪ B - (A ∆ B)
+    * $$A \triangle B = (A + B) \cup (B - A) = A \cup B - (A \triangle B)$$
     * ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Venn0110.svg/256px-Venn0110.svg.png)
 
 * Produit
-    * A x B != B x A
-    * A x B = { (a, b) a ∈ A et b ∈ B }
+    * $$A \times B \neq B \times A$$
+    * $$A \times B = \{ (a, b) a \in A$$ et $$b \in B \}$$
     * ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cartesian_Product_qtl1.svg/256px-Cartesian_Product_qtl1.svg.png)
 
-> Exemple: A = {1, 2} et B = {3, 4}  
-> A x B = {1, 2} x {3, 4} = {(1, 3), (1, 4), (2, 3), (2, 4)}  
-> B x A = {3, 4} x {1, 2} = {(3, 1), (3, 2), (4, 1), (4, 2)}  
-> A x B ≠ B x A  
-> Exemple: A = {1, 2} et B = ∅  
-> A x B = {1, 2} x ∅ = ∅  
-> B x A = ∅ x {1, 2} = ∅   
-> A x B = B x A
+> Exemple: $$A = \{1, 2\}$$ et $$B = \{3, 4\}$$  
+> $$A \times B = \{1, 2\} \times \{3, 4\} = \{(1, 3), (1, 4), (2, 3), (2, 4)\}$$  
+> $$B \times A = \{3, 4\} \times \{1, 2\} = \{(3, 1), (3, 2), (4, 1), (4, 2)\}$$
+> $$A \times B \neq B \times A$$  
+> Exemple: $$A = \{1, 2\}$$ et $$B = \emptyset$$  
+> $$A \times B = \{1, 2\} \times \emptyset = \emptyset$$  
+> $$B \times A = \emptyset \times \{1, 2\} = \emptyset$$
+> $$A \times B = B \times A$$
 
-Si A ∩ B = ∅ on dit que A et B sont disjoints
+Si $$A \cap B = \emptyset$$ on dit que A et B sont disjoints
 
 ### Propriétés remarquables
 
 * Associativité
-    * A ∪ (B ∪ C) = (A ∪ B) ∪ C
-    * (A ∩ B) ∩ C = (A ∩ (B) ∩ C)
-> Cela entraîne les écritures  A ∪ B ∪ C & A ∩ B ∩ C
+    * $$A \cup (B \cup C) = (A \cup B) \cup C$$
+    * $$(A \cap B) \cap C = (A \cap (B) \cap C)$$
+> Cela entraîne les écritures  $$A \cup B \cup C$$ et $$A \cap B \cap C$$
 
 * Commutativité
-    * A ∪ B = B ∪ A
-    * A ∩ B = B ∩ A
+    * $$A \cup B = B \cup A$$
+    * $$A \cap B = B \cap A$$
 
 * Distributivité
-    * A ∩ ( B ∪ C ) = (A ∩ B) ∪ (A ∩ C)
-    * A ∪ ( B ∩ C) = (A ∪ B) ∩ (A ∪ C)
+    * $$A \cap ( B \cup C ) = (A \cap B) \cup (A \cap C)$$
+    * $$A \cup ( B \cap C) = (A \cup B) \cap (A \cup C)$$
+
 * Autres égalités
-    * A ∩ Ω = 1
-    * A ∪ Ω = Ω
-    * A ∩ ∅ = ∅
-    * A ∪ ∅ = A
-    * <span style="text-decoration: overline">(A ∪ B)</span> = A&#773; ∪ B&#773;
-    * <span style="text-decoration: overline">(A ∩ B)</span> = A&#773; ∩ B&#773;
-    * A  ∩ A&#773; = ∅
-    * A ∪ A&#773; = Ω
+    * $$A \cap \Omega = 1$$
+    * $$A \cup \Omega = \Omega$$
+    * $$A \cap \emptyset = \emptyset$$
+    * $$A \cup \emptyset = A$$
+    * $$\overline{(A ∪ B)} = \overline{A} \cup \overline{B}$$
+    * $$\overline{(A ∩ B)} = \overline{A} \cap \overline{B}$$
+    * $$A \cap \overline{A} = \emptyset$$
+    * $$A \cup \overline{A} = \Omega$$
+
+
+* Définition:
+    Soit A un ensemble dans un univers $$ \Omega $$ . On appelle fonction indicatrice de A, et on note $$\chi_F$$ , la fonction égale à 1 lorsque son argument appartient à A et égale à 0 autrement 
+    <script type="math/tex; mode=display">
+    \chi_F:E \mapsto \{ 0, 1 \} \\
+    x \longmapsto
+    \begin{cases}
+        1 \quad \text{si} \quad x \in A \\
+        0 \quad \text{si} \quad x \notin A
+    \end{cases}
+    </script>
+
+* Définition: Une collection ordonnée de k élements ($$k \in \mathbb{N^*}$$) (est appelée un k-uplet)
+
+* Définition: Soient E et F deux ensembles
+Une application de f de E dans F est une relation entre ces ensembles que associe à chaque élement de E un unique élement de F:
+
+$$\forall x \in E, y \in F$$ tel que $$f(x) = y$$ <br> y est l'image de x (par f) et x est l'antécédent de y
+
+
+Remarque:
+ "Application" et "fonction" sont de plus en plus souvent utilisés comme des synonymes. En fait, une fonction est une relation entre l'ensemble E et F qui à tout élement de E associe au plus un élement de F. la fontion peut ne pas être définie par certains élements de E
+
+ Une fonction est une application de son ensemble de définition dans un ensemble donné
+
+ Pour une application f, $$E \rightarrow F$$ et $$A \subset E, B \subset F$$
+
+ On note f (A) l'ensemble des éléments de F ayant un antécédent par f dans A
+
+ $$f(A) = \{ y \in F\|\exists x \in A$$ tel que $$f(x)=y\} = \{f(x)\|x \in A\}$$
+
+ On note $$f^{-1}(B)$$ l'ensemble des élements e E ayant par image un élément de B $$f^{-1}(B) = \{x \in E f(x) \in B\}$$
+
+* Attention:
+ Il ne faut pas confondre cette notation avec celle de l'application réciproque qui elle n'existe que si f est bijective
+
+ II Sommes, Produits, Coefficients binomiaux et dénombrements
+
+ Soit I un ensemble fini et $$x_i \in I$$ une famille de réels indéxés par I
+
+ la somme des éléments de la famille (un nombre de card(I)) se note $$ \sum_{i \in I} (x_i)$$ alors que le produit de ces termes se note
+
+ $$\prod_{i \in I} x_i$$
+
+Si les élements de Sont des entiers consécutifs compris entre n et n' c'est à dire si $$I = \{n, \ldots, n'\}$$ on écrit plutôt
+
+$$\sum_{i = n}^{n'} x_i$$
+
+et 
+
+$$\prod_{i = n}^{n'} x_i$$
+
+par la somme et le produit des élements de la famille
+
+* Remarque:
+    Sous certaines conditions les définitions de ces sommes et produits peuvent s'étendre au cas où I est infini
+
+* Définition: 
+Suite $$(U_n) (n \in \mathbb{N})$$ est dite arithmétique de raison r avec $$r \in R$$, si pour tout $$n \in \mathbb{N}, Un+1 = Un+r$$
+
+On a alors $$\forall n \in \mathbb{N} Un = U_0 + nr$$
+
+Une suite arithmétique est totalement définie par la donnée de U0 et de r
+
+* Proposition:
+
+Soit $$(Un) n \in \mathbb{N}$$ Une suite arithmétique de raison r
+
+Soient m et n deux entiers naturels . On a alors (formule de la somme de la suite arithmétique)
+
+* Preuve:
+
+l'égalité [(n+m +1)(Um + Un)]/2 = ?
+
+descend directement de l'égalité Uk = U0 + nr pour tout k \in N
+
+* Preuve 1 
+
+Soit $$n \in \mathbb{N}$$ On fait une récurrence sur n
+
