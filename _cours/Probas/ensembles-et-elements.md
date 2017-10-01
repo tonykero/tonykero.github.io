@@ -2,28 +2,9 @@
 category: Probas
 ---
 
-# <u>Ensembles & Eléments</u>
+# <u> I Ensembles & Eléments</u>
 
-| Sommaire                              |
-| :---:                                 |
-| [Légende](#legend)                    |
-| [Notions Fondamentales](#1)           |
-| [Opérations sur les ensembles](#2)    |
-
-## <a id="legend"> Légende
-
-| Symbole   | Description                   |
-| :---:     | :---                          |
-| ⊂         | est inclus dans               |
-| Ω         | Ensemble Universel            |
-| ∅         | Ensemble vide                 |
-| ∈         | Appartient à                  |
-| ∪         | Union                         |
-| ∩         | Intersection                  |
-| ∆         | Différence Symmétrique        |
-| X&#773;   | Inverse (ou complément) de X  |
-
-## <a id="1"> Notions fondamentales
+## Notions fondamentales
 
 Il n'y a pas de définitions mathématiques précises de ce qu'est un ensemble; c'est une notion **première**.
 
@@ -168,48 +149,3 @@ Remarque:
 
 * Attention:
  Il ne faut pas confondre cette notation avec celle de l'application réciproque qui elle n'existe que si f est bijective
-
- II Sommes, Produits, Coefficients binomiaux et dénombrements
-
- Soit I un ensemble fini et $$x_i \in I$$ une famille de réels indéxés par I
-
- la somme des éléments de la famille (un nombre de card(I)) se note $$ \sum_{i \in I} (x_i)$$ alors que le produit de ces termes se note
-
- $$\prod_{i \in I} x_i$$
-
-Si les élements de Sont des entiers consécutifs compris entre n et n' c'est à dire si $$I = \{n, \ldots, n'\}$$ on écrit plutôt
-
-$$\sum_{i = n}^{n'} x_i$$
-
-et 
-
-$$\prod_{i = n}^{n'} x_i$$
-
-par la somme et le produit des élements de la famille
-
-* Remarque:
-    Sous certaines conditions les définitions de ces sommes et produits peuvent s'étendre au cas où I est infini
-
-* Définition: 
-Suite $$(U_n) (n \in \mathbb{N})$$ est dite arithmétique de raison r avec $$r \in R$$, si pour tout $$n \in \mathbb{N}, Un+1 = Un+r$$
-
-On a alors $$\forall n \in \mathbb{N} Un = U_0 + nr$$
-
-Une suite arithmétique est totalement définie par la donnée de U0 et de r
-
-* Proposition:
-
-Soit $$(Un) n \in \mathbb{N}$$ Une suite arithmétique de raison r
-
-Soient m et n deux entiers naturels . On a alors (formule de la somme de la suite arithmétique)
-
-* Preuve:
-
-l'égalité [(n+m +1)(Um + Un)]/2 = ?
-
-descend directement de l'égalité Uk = U0 + nr pour tout k \in N
-
-* Preuve 1 
-
-Soit $$n \in \mathbb{N}$$ On fait une récurrence sur n
-
