@@ -7,8 +7,6 @@ permalink: index
 
 [:zap: My Projects]({% link _pages/projects.md %})
 
-[:book: Mes Cours]({% link _pages/cours.md %})
-
 ---
 ## Posts
 
