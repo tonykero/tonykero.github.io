@@ -12,6 +12,22 @@
         {
             el.outerHTML = `<div class="equation">${katex.renderToString("\\displaystyle "+el.innerText)}</div>`;
         })
+
+        document.querySelectorAll("img.emoji").forEach(function(el)
+        {
+
+            let src = el.getAttribute("src");
+            const rgx = /(\/)(\w*)(\.png)/;
+
+            let id = rgx.exec(src)[2];
+
+            el.setAttribute("src", "https://twemoji.maxcdn.com/2/svg/" + id + ".svg");
+
+            const size = "22"
+            el.setAttribute("width", size);
+            el.setAttribute("height", size);
+            el.setAttribute("style", "vertical-align:middle;");
+        })
     </script>
 
   {% if site.google_analytics %}
