@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  
+  {% include head.html %}
+
+    <style>
+        .wrapper{
+            margin-left: 4cm;
+        }
+        header{
+            float: left !important;
+        }
+
+        section{
+            float: right !important;
+            margin-right: -40%;
+            width: 100%;
+        }
+    </style>
+
+<body>
+    <div class="wrapper">
+      <header>
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        <a href="/">Home</a>
+        
+
+      </header>
+      <section>
+      {{ content }}
+      </section>
+      
+      {% include footer.html %}
+
+    </div>
+    
+    {% include scripts.html %}
+
+  </body>
+</html>

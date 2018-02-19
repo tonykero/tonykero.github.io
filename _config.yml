@@ -12,13 +12,14 @@ include:
   - _includes
 
 collections:
-  cours:
+  projects:
     output: true
-    permalink: /:categories/:title
+    permalink: /projects/:title
 
 defaults:
   - {scope: {type: posts}, values: {layout: page, permalink: '/posts/:year/:month/:day/:title/'}}
   - {scope: {type: pages}, values: {layout: page}}
+  - {scope: {type: projects}, values: {layout: project}}
 # Build settings
 markdown: kramdown
 kramdown:
