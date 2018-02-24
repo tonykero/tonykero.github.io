@@ -28,6 +28,28 @@
             el.setAttribute("height", size);
             el.setAttribute("style", "vertical-align:middle;");
         })
+        
+        document.querySelectorAll("canvas[class='canvas-nomnoml']").forEach(function(el)
+        {
+            let file = el.getAttribute("src")
+            fetch(file).then(function(response){
+                response.text().then(function(text){
+                    nomnoml.draw(el, text);
+                    let img = el.toDataURL("image/png", 1);
+                    let img_elem = document.createElement("img")
+                    img_elem.src = img
+                    el.parentNode.insertBefore(img_elem, el.nextElementSibling)
+                    el.parentNode.removeChild(el)
+                    /*
+                    let a_tag = document.createElement("a");
+                    a_tag.appendChild(document.createTextNode("display as image"))
+                    a_tag.setAttribute("href", img)
+                    el.parentNode.insertBefore(a_tag, el.nextElementSibling)
+                    */
+                });
+            });
+        })
+
     </script>
 
   {% if site.google_analytics %}
