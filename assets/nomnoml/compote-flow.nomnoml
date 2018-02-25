@@ -1,0 +1,121 @@
+#zoom:      0.5
+#spacing:   40
+#.project:  fill=#FFFF00 center
+#.exec:     fill=#FF8000 center
+#.lang:     fill=#80FF80 center
+#.generic:  fill=#8080FF center
+#.closed:   fill=#FF0000 center
+#.option:   fill=#C0C0C0 center
+
+[<frame>Project Flow|
+
+    [ <lang>    C,C++,OpenCL,CUDA               ]
+    [ <lang>    Fortran                         ]
+    [ <lang>    LLVM IR                         ]
+    [ <lang>    asm.js   | JavaScript Subset    ]
+    [ <lang>    JavaScript                      ]
+    [ <lang>    wasm                            ]
+    [ <lang> Native ISAs | CPU Architectures    ]
+    [ <lang> AMDGPU                             ]
+    [ <lang> NVPTX                              ]
+    [ <lang> SPIR V                             ]
+    [ <lang> GLSL                               ]
+    [ <lang> HLSL                               ]
+
+    [<exec> Execution   ]
+
+    [ <project> Clang       | LLVM Frontend ;for C Family; (C/C++, OpenCL, CUDA)    ]
+    [ <option>  Flang       | LLVM Frontend for Fortran                             ]
+    [ <project> Emscripten  | asm.js LLVM Backend                                   ]
+    [ <project> Binaryen    | WebAssembly Compiler Infrastructure                   ]
+    [ <project> WAVM        | WebAssembly LLVM JIT                                  ]
+    [ <closed>  CUDA Driver                                                         ]
+    [ <project> ROCm-Runtime                                                        ]
+    [ <project> LLVM-SPIRV                                                          ]
+    [ <project> Vulkan                                                              ]
+    [ <option>  Polly       | OpenMP; SIMD; OpenCL & CUDA; Code Generation          ]
+    [ <option>  KLEE        | Symbolic Virtual Machine                              ]
+    [ <option>  libFuzzer   | Coverage guided fuzzing                               ]
+    [ <option>  souper      | Google's souperoptimizer                              ]
+    [ <project> V8          | Google's JavaScript Engine                            ]
+    [ <option>  ChakraCore  | Microsoft's JavaScript Engine                         ]
+    [ <project> shaderc                                                             ]
+    [ <option>  OpenGL                                                              ]
+
+    [ <generic> Any Lang                ]
+    [ <generic> LLVM Backends           ]
+    [ <generic> OS Binaries             ]
+    [ <generic> WebAssembly             ]
+    [ <generic> LLVM IR Passes          ]
+
+    [C,C++,OpenCL,CUDA  ]->[Clang       ]
+    [Fortran            ]->[Flang       ]
+    [Clang              ]->[LLVM IR     ]
+    [Flang              ]->[LLVM IR     ]
+    [GLSL               ]->[shaderc     ]
+    [HLSL               ]->[shaderc     ]
+    
+    [GLSL               ]->[OpenGL      ]
+    
+    [Any Lang           ]->[LLVM IR     ]
+
+    [LLVM IR        ]->[LLVM Backends   ]
+    [LLVM IR        ]->[Emscripten      ]
+    [LLVM IR        ]->[LLVM IR Passes  ]
+    
+    [shaderc        ]->[SPIR V]
+
+    [LLVM Backends  ]->[LLVM-SPIRV      ]
+    [LLVM Backends  ]->[AMDGPU          ]
+    [LLVM Backends  ]->[NVPTX           ]
+    [LLVM Backends  ]->[WebAssembly     ]
+    [LLVM Backends  ]->[Native ISAs     ]
+
+    [Emscripten     ]->[asm.js          ]
+
+    [LLVM IR Passes]->[Polly            ]
+    [LLVM IR Passes]->[souper           ]
+    [LLVM IR Passes]->[KLEE             ]
+    [LLVM IR Passes]->[libFuzzer        ]
+    
+    [AMDGPU         ]->[ROCm-Runtime    ]
+    [NVPTX          ]->[CUDA Driver     ]
+    [LLVM-SPIRV     ]->[SPIR V          ]
+    [WebAssembly    ]->[Binaryen        ]
+    [Native ISAs    ]->[OS Binaries     ]
+
+    [asm.js         ]->[Binaryen        ]
+    [asm.js         ]->[JavaScript      ]
+
+    [Binaryen       ]->[wasm            ]
+    
+    [wasm           ]->[JavaScript      ]
+    [wasm           ]->[WAVM            ]
+    
+    [JavaScript     ]->[V8              ]
+    [JavaScript     ]->[ChakraCore      ]
+    [WAVM           ]->[LLVM IR         ]
+
+    [SPIR V         ]->[Vulkan          ]
+
+    [CUDA Driver    ]->[Execution       ]
+    [ROCm-Runtime   ]->[Execution       ]
+    [Vulkan         ]->[Execution       ]
+    [OpenGL         ]->[Execution       ]
+    [WAVM           ]->[Execution       ]
+    [OS Binaries    ]->[Execution       ]
+    [V8             ]->[Execution       ]
+    [ChakraCore     ]->[Execution       ]
+|
+
+[Legend|
+    [ <project> Project                 ]
+    [ <closed>  Closed Source Project   ]
+    [ <lang>    Language                ]
+    [ <exec>    Executing The Beast     ]
+    [ <generic> Generic Term            ]
+    [ <option>  Optional Project        ]
+]
+
+]
+
