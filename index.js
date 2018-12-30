@@ -4,7 +4,7 @@ new Docute({
         docuteKatex(),
         docuteMermaid()
     ],
-    sourcePath: "./",
+    sourcePath: "https://tonykero-pages-cdn.surge.sh",
     nav: [
         {
             title: "Home",
