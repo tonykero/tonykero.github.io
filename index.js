@@ -1,18 +1,16 @@
-const sourcePath = "https://tonykero-pages-cdn.surge.sh"
-const config = { nav: null, sidebar: null }
+const sourcePath = "https://raw.githubusercontent.com/tonykero/tonykero.github.io/pages-cdn"
+
 Vue.http.get(sourcePath + '/config.json').then(res => {
     return res.json();
 }).then(json => {
-    config = json;
-})
-
-new Docute({
-    target: '#docute',
-    plugins: [
-        docuteKatex(),
-        docuteMermaid()
-    ],
-    sourcePath,
-    nav: config.nav,
-    sidebar: config.sidebar
+    new Docute({
+        target: '#docute',
+        plugins: [
+            docuteKatex(),
+            docuteMermaid()
+        ],
+        sourcePath,
+        nav: json.nav,
+        sidebar: json.sidebar
+    })
 })
